@@ -1,0 +1,16 @@
+{
+  "appId": "umi-version3-project",
+  "productName": "umi客户端项目",
+  "copyright": "",
+  "directories": {
+    "output": "electron-builder"
+  },
+  "mac": {
+    "entitlements": "./entitlements.mac.plist",
+    "hardenedRuntime": true,
+    "extendInfo": {
+      "NSMicrophoneUsageDescription": "请允许本程序访问您的麦克风",
+      "NSCameraUsageDescription": "请允许本程序访问您的摄像头"
+    }
+  }
+}

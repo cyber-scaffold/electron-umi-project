@@ -1,3 +1,5 @@
+process.env.PROCESS_ENV=process.env.PROCESS_ENV||"production";
+
 const path=require("path");
 require("@babel/register")({
   cache:true,
@@ -16,4 +18,5 @@ require("@babel/register")({
     }]
   ]
 });
+
 require("./electron/app.js");

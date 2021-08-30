@@ -7,7 +7,7 @@ import response_middleware from "@/server/middlewares/response_middleware";
 
 const server=new Koa();
 
-server.use(koa_static(path.resolve(__dirname,"../dist/")));
+server.use(koa_static(path.resolve(__dirname,"../../dist/")));
 server.use(response_middleware);
 server.use(helloWord);
 

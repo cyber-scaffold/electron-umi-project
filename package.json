@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "umi-version3-project",
+  "name": "electron-umi-project",
   "version": "1.0.0",
   "main": "./main.js",
   "description": "基于electronjs||koa2||umijs搭建的客户端项目",

@@ -5,9 +5,10 @@
   "main": "./main.js",
   "description": "基于electronjs||koa2||umijs搭建的客户端项目",
   "scripts": {
-    "dev:umi": "umi dev",
-    "dev:client:local": "umi dev & cross-env PROCESS_ENV=development electron main.js",
-    "dev:client:prod": "umi dev & cross-env PROCESS_ENV=production electron main.js",
+    "dev:server:local": "cross-env PROCESS_ENV=development umi dev",
+    "dev:server:prod": "cross-env PROCESS_ENV=production umi dev",
+    "dev:client:local": "cross-env PROCESS_ENV=development electron main.js",
+    "dev:client:prod": "cross-env PROCESS_ENV=production electron main.js",
     "build:mac": "electron-builder --universal",
     "build:win": "electron-builder --windows --ia32",
     "lint": "eslint {src,mock,tests}/**/*.{js,jsx} --fix",

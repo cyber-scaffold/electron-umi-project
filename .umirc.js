@@ -23,6 +23,9 @@ export default defineConfig({
       locale:zhCN
     }
   },
+  externals:{
+    electron:"electron"
+  },
   locale:{},
   title: name,
   sass: {

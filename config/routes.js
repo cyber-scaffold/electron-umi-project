@@ -1,8 +1,8 @@
 
 export default [{
   path: '/',
-  component: '../layouts/index',
+  component: '@/layouts/index',
   routes: [{
-    path: '/', component: 'MainPage/index.js'
+    path: '/', component: '@/pages//MainPage'
   }]
 }]

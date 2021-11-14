@@ -12,7 +12,7 @@ app.on("ready",async ()=>{
     message:["process.env.PROCESS_ENV",process.env.PROCESS_ENV].join("\n")
   });
   if(process.env.PROCESS_ENV==="development"){
-    await create_window("http://localhost:7005");
+    await create_window("http://localhost:7007");
   };
   if(process.env.PROCESS_ENV==="production"){
     await create_window("http://localhost:9000");

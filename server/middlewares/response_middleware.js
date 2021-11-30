@@ -5,6 +5,7 @@ export default async function response_middleware(context,next){
     const returnValue = await next();
     if (returnValue instanceof Buffer) {
       context.response.status = 200;
+      context.response.set('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
       context.response.body = returnValue;
       return false;
     }

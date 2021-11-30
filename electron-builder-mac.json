@@ -1,9 +1,9 @@
 {
   "appId": "umi-version3-project",
-  "productName": "umi客户端项目",
+  "productName": "私人会计助手",
   "copyright": "",
   "directories": {
-    "output": "electron-builder"
+    "output": "./assets/electron-builder-mac/"
   },
   "mac": {
     "entitlements": "./entitlements.mac.plist",

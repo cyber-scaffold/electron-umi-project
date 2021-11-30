@@ -18,12 +18,9 @@ export default async function create_window(load_url){
     }
   });
   window_object.loadURL(load_url);
-  window_object.webContents.openDevTools();
+  // window_object.webContents.openDevTools();
   await new Promise((resolve)=>window_object.once("ready-to-show",resolve));
   window_object.on("new-window",()=>console.log("new-window"));
   window_object.show();
-  setInterval(()=>{
-    window_object.webContents.send("main-command",{message:"this is message"});
-  },1000);
   return window_object;
 };

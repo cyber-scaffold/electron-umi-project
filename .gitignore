@@ -8,8 +8,8 @@
 /package-lock.json
 
 # production
+/assets
 /dist
-/electron-builder
 
 # misc
 .DS_Store

@@ -1,0 +1,16 @@
+{
+  "appId": "umi-version3-project",
+  "productName": "私人会计助手",
+  "copyright": "",
+  "directories": {
+    "output": "./assets/electron-builder-win/"
+  },
+  "mac": {
+    "entitlements": "./entitlements.mac.plist",
+    "hardenedRuntime": true,
+    "extendInfo": {
+      "NSMicrophoneUsageDescription": "请允许本程序访问您的麦克风",
+      "NSCameraUsageDescription": "请允许本程序访问您的摄像头"
+    }
+  }
+}

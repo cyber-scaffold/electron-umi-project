@@ -1,6 +1,6 @@
 process.env.PROCESS_ENV=process.env.PROCESS_ENV||"production";
-
 const path=require("path");
+
 require("@babel/register")({
   cache:true,
   cwd:path.resolve(__dirname,"./"),
@@ -12,11 +12,13 @@ require("@babel/register")({
     [require.resolve("babel-plugin-module-resolver"), {
       root: [path.resolve(__dirname,"./electron/")],
       alias: {
-        "@": path.resolve(__dirname,"./electron/"),
-        "@@": path.resolve(__dirname,"./")
+        "@@": path.resolve(__dirname,"./"),
+        "@server": path.resolve(__dirname,"./server/"),
+        "@electron": path.resolve(__dirname,"./electron/")
       }
     }]
   ]
 });
 
 require("./electron/app.js");
+

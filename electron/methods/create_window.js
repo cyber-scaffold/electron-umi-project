@@ -1,6 +1,6 @@
 import {screen,BrowserWindow} from "electron";
 
-export default async function create_window(load_url){
+export default async function create_window({load_url,load_file}){
   const {width,height}=await screen.getPrimaryDisplay().workAreaSize;
   const window_object=new BrowserWindow({
     width:parseInt(width*0.8),
@@ -17,7 +17,8 @@ export default async function create_window(load_url){
       backgroundThrottlingBoolean:false
     }
   });
-  window_object.loadURL(load_url);
+  load_url?window_object.loadURL(load_url):void(0);
+  load_file?window_object.loadFile(load_file):void(0);
   // window_object.webContents.openDevTools();
   await new Promise((resolve)=>window_object.once("ready-to-show",resolve));
   window_object.on("new-window",()=>console.log("new-window"));

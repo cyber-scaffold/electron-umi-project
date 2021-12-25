@@ -13,8 +13,7 @@ require("@babel/register")({
       root: [path.resolve(__dirname,"./electron/")],
       alias: {
         "@@": path.resolve(__dirname,"./"),
-        "@server": path.resolve(__dirname,"./server/"),
-        "@electron": path.resolve(__dirname,"./electron/")
+        "@electron":path.resolve(__dirname,"./electron")
       }
     }]
   ]

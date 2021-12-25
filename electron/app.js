@@ -1,18 +1,17 @@
 import {app} from "electron";
-import server from "@server/server";
-import create_window from "@electron/methods/create_window";
+import create_window from "./methods/create_window";
 
+import "./ipcMain";
 
 app.on("ready",async ()=>{
   if(process.env.PROCESS_ENV==="development"){
-    const window_object=await create_window("http://localhost:7005");
+    const window_object=await create_window({load_url:"http://localhost:7005"});
     window_object.webContents.openDevTools();
   };
   if(process.env.PROCESS_ENV==="production"){
-    server.listen(9000,()=>console.log("server is run port 9000"));
-    await create_window("http://localhost:9000");
+    const window_object=await create_window({load_file:"dist/index.html"});
+    console.log(window_object);
   };
 });
 
 app.on("window-all-closed",()=>app.quit());
-

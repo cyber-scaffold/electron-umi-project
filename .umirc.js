@@ -10,6 +10,8 @@ export default defineConfig({
   proxy,
   routes,
   hash:true,
+  publicPath:"./",
+  history:{type:"hash"},
   nodeModulesTransform:{type:"none"},
   devServer: {
     port: 7005,

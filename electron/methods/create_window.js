@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import {screen,BrowserWindow} from "electron";
 
 export default async function create_window({load_url,load_file}){
@@ -17,11 +18,11 @@ export default async function create_window({load_url,load_file}){
       backgroundThrottlingBoolean:false
     }
   });
-  load_url?window_object.loadURL(load_url):void(0);
-  load_file?window_object.loadFile(load_file):void(0);
+  if(load_url)window_object.loadURL(load_url);
+  if(load_file)window_object.loadFile(load_file);
   // window_object.webContents.openDevTools();
   await new Promise((resolve)=>window_object.once("ready-to-show",resolve));
   window_object.on("new-window",()=>console.log("new-window"));
   window_object.show();
   return window_object;
-};
+}

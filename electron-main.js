@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 process.env.PROCESS_ENV=process.env.PROCESS_ENV||"production";
 const path=require("path");
 

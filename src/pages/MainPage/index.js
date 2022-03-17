@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import {Button} from "antd";
 import {ipcRenderer} from "electron";
 import React,{useCallback} from "react";
@@ -11,6 +12,8 @@ export default function FunctionComponent() {
     alert(result);
   },[]);
   return (
-    <Button type="primary" onClick={handleClick}>保存文件并显示</Button>
-)};
-
+    <div>
+      <div>保存一个空文件并弹出提示框</div>
+      <Button type="primary" onClick={handleClick}>保存文件并显示</Button>
+    </div>
+)}

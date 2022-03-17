@@ -1,9 +1,9 @@
-import { defineConfig } from "umi";
+import {defineConfig} from "umi";
 import zhCN from "antd/lib/locale/zh_CN";
 
 import proxy from "./config/proxy";
 import routes from "./config/routes";
-import { name } from "./package.json";
+import {name} from "./package.json";
 
 // ref: https://umijs.org/config/
 export default defineConfig({
@@ -29,8 +29,5 @@ export default defineConfig({
     electron:"electron"
   },
   locale:{},
-  title: name,
-  sass: {
-    implementation: require('node-sass'),
-  }
+  title: name
 })
